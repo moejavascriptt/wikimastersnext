@@ -1,32 +1,32 @@
-import Link from 'next/link'
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
+  NavigationMenuItem,
   NavigationMenuList,
-  NavigationMenuItem
-} from '@/components/ui/navigation-menu'
-import { Button } from '@/components/ui/button'
+} from "@/components/ui/navigation-menu";
 
-export function NavBar () {
+export function NavBar() {
   return (
-    <nav className='w-full border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50'>
-      <div className='container mx-auto flex h-16 items-center justify-between px-4'>
-        <div className='flex items-center gap-2'>
+    <nav className="w-full border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
+      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+        <div className="flex items-center gap-2">
           <Link
-            href='/'
-            className='font-bold text-xl tracking-tight text-gray-900'
+            href="/"
+            className="font-bold text-xl tracking-tight text-gray-900"
           >
             WikiMasters
           </Link>
           <NavigationMenu>
-            <NavigationMenuList className='flex items-center gap-2'>
+            <NavigationMenuList className="flex items-center gap-2">
               <NavigationMenuItem>
-                <Button asChild variant='outline'>
-                  <Link href='/signin'>Sign In</Link>
+                <Button asChild variant="outline">
+                  <Link href="/signin">Sign In</Link>
                 </Button>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <Button asChild>
-                  <Link href='/signup'>Sign Up</Link>
+                  <Link href="/signup">Sign Up</Link>
                 </Button>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -34,5 +34,5 @@ export function NavBar () {
         </div>
       </div>
     </nav>
-  )
+  );
 }
